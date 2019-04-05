@@ -48,5 +48,8 @@ The api server runs by default on port 8080. It provides a data url at
 - Feel free to modify `data/people.json` with any changes that you see fit.
 - Feel free to add additional routes to the express app by modifying
   `api/app.js`
+- Lots of freedom here, though be able to reason out why a library is useful.
+  One question might be: What if you could not use said library, how could that
+  be handled?
 - Your address book does not need to use the exact same CSS or HTML as provided
   by the mockup.
