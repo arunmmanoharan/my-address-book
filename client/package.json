@@ -72,5 +72,6 @@
 			"eslint src/ --fix",
 			"git add"
 		]
-	}
+	},
+	"proxy": "http://localhost:8080"
 }
