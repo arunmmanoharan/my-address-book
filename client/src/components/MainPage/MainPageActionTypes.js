@@ -1,0 +1,7 @@
+/**
+ * Get person data
+ * @type {string}
+ */
+export const QUERY_GET_PERSON_REQUEST = 'QUERY_GET_PERSON_REQUEST';
+export const QUERY_GET_PERSON_SUCCESS = 'QUERY_GET_PERSON_SUCCESS';
+export const QUERY_GET_PERSON_FAILURE = 'QUERY_GET_PERSON_FAILURE';
