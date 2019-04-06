@@ -1,8 +1,4 @@
-import {
-	QUERY_GET_PERSON_FAILURE,
-	QUERY_GET_PERSON_REQUEST,
-	QUERY_GET_PERSON_SUCCESS
-} from './MainPageActionTypes';
+import { QUERY_GET_PERSON_FAILURE, QUERY_GET_PERSON_REQUEST, QUERY_GET_PERSON_SUCCESS } from './MainPageActionTypes';
 import getService from '../../services/dataService';
 
 /**
@@ -31,7 +27,7 @@ const shouldQueryPerson = () => {
 	return true;
 };
 
-export const queryPerson = (url, id) => {
+const queryPerson = (url, id) => {
 	const actions = {
 		requestAction: queryPersonRequest,
 		successAction: queryPersonSuccess,
@@ -44,3 +40,5 @@ export const queryPerson = (url, id) => {
 
 	return getService(url, options, id);
 };
+
+export default queryPerson;

@@ -1,6 +1,11 @@
-import {combineReducers} from 'redux';
-import {QUERY_GET_PEOPLE_SUCCESS,QUERY_GET_PEOPLE_REQUEST,QUERY_GET_PEOPLE_FAILURE, GET_PERSON_ID} from './LeftNavActionTypes';
-import {orderBy} from 'lodash';
+import { combineReducers } from 'redux';
+import { orderBy } from 'lodash';
+import {
+	QUERY_GET_PEOPLE_SUCCESS,
+	QUERY_GET_PEOPLE_REQUEST,
+	QUERY_GET_PEOPLE_FAILURE,
+	GET_PERSON_ID
+} from './LeftNavActionTypes';
 
 /**
  * Get People Data
@@ -43,7 +48,7 @@ const getPeople = (state = initialPeopleData, action) => {
  * @type {{id: number}}
  */
 const initialPersonId = {
-	id: 1,
+	id: 1
 };
 
 const getPersonID = (state = initialPersonId, action) => {
