@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "install-api": "cd api/ && npm install && node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "start": "concurrently \"npm run install-api\" \"npm run heroku-postbuild\""
+    "install-client": "cd client && npm install && npm run build",
+    "heroku-postbuild": "concurrently \"npm run install-api\" \"npm run heroku-postbuild\""
   },
   "engines": {
     "node": ">=10.0.0"
