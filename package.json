@@ -6,5 +6,8 @@
     "install": "npm run install-api",
     "install-api": "cd api/ && npm install",
     "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
