@@ -20,6 +20,10 @@ node api/server.js
 ## Run the client
 
 ```bash
+Open up a new terminal/command prompt and navigate to this folder, 
+then do the following:
+
+
 cd client && npm install
 npm start
 ```
