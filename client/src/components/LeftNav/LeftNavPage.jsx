@@ -59,10 +59,11 @@ class LeftNavPage extends PureComponent {
 	};
 
 	render() {
-		const titleArray = uniq(this.state.peopleData.map(item => item.name.slice(0, 1)));
+		const titleArray = uniq(this.state.peopleData.map(item => item.name.charAt(0)));
 		const peopleData = titleArray.map(item => {
 			return {
-				[item]: this.state.peopleData.filter(people => people.name[0] === item)
+				key: item,
+				people: this.state.peopleData.filter(people => people.name[0] === item)
 			};
 		});
 
@@ -92,37 +93,33 @@ class LeftNavPage extends PureComponent {
 					)}
 				</span>
 				<div className="app-directory">
-					{titleArray.map(item => {
-						return (
-							<Fragment key={uniqueId()}>
-								<div key={uniqueId()} className="app-directory-separator">
-									{item}
-								</div>
-								{peopleData.map(people => {
-									return (
-										<Fragment key={uniqueId()}>
-											{!isEmpty(people[item]) &&
-												people[item].map(person => {
-													return (
-														<div
-															role="button"
-															tabIndex={0}
-															key={uniqueId()}
-															className="app-directory-item"
-															onClick={() => this.handleClick(person.id)}
-															onKeyDown={() => {}}
-														>
-															{' '}
-															{person.name}{' '}
-														</div>
-													);
-												})}
-										</Fragment>
-									);
-								})}
-							</Fragment>
-						);
-					})}
+					<Fragment>
+						{peopleData.map(category => {
+							return (
+								<Fragment key={uniqueId()}>
+									<div key={uniqueId()} className="app-directory-separator">
+										{category.key}
+									</div>
+									{!isEmpty(category.people) &&
+										category.people.map(person => {
+											return (
+												<div
+													role="button"
+													tabIndex={0}
+													key={uniqueId()}
+													className="app-directory-item"
+													onClick={() => this.handleClick(person.id)}
+													onKeyDown={() => {}}
+												>
+													{' '}
+													{person.name}{' '}
+												</div>
+											);
+										})}
+								</Fragment>
+							);
+						})}
+					</Fragment>
 				</div>
 			</div>
 		);
