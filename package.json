@@ -3,11 +3,14 @@
   "description": "Programming exercise: Create an address book",
   "version": "1.0.0",
   "scripts": {
-    "install": "npm run install-api",
     "install-api": "cd api/ && npm install",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "concurrently \"install-api\" \"heroku-postbuild\""
   },
   "engines": {
     "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0"
   }
 }
