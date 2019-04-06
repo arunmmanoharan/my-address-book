@@ -17,6 +17,13 @@ Install Dependencies `npm install`
 node api/server.js
 ```
 
+## Run the client
+
+```bash
+cd client && npm install
+npm start
+```
+
 ## URL Endpoints
 
 The api server runs by default on port 8080. It provides a data url at

@@ -1,0 +1,84 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": [
+      2,
+      "tab",
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1
+      }
+    ],
+    "no-tabs": 0,
+    "react/prop-types": 0,
+    "no-underscore-dangle": 0,
+    "import/imports-first": [
+      "error",
+      "absolute-first"
+    ],
+    "import/newline-after-import": "error",
+    "react/jsx-indent": [
+      4,
+      "tab"
+    ],
+    "react/jsx-indent-props": [
+      4,
+      "tab"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/destructuring-assignment": "never",
+    "no-param-reassign": 0,
+    "react/no-multi-comp": 0,
+    "no-plusplus": 0,
+    "react/no-did-update-set-state": 0,
+    "react/no-access-state-in-setstate": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "react/require-default-props": 0,
+    "react/no-unused-state": 0,
+    "consistent-return": 0,
+    "no-useless-escape": 0,
+    "prefer-arrow-callback": [
+      2,
+      {
+        "allowUnboundThis": false
+      }
+    ],
+    "react/no-unsafe": [
+      2,
+      {
+        "checkAliases": true
+      }
+    ]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  }
+}
