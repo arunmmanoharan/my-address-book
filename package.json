@@ -5,8 +5,5 @@
   "scripts": {
     "install": "npm run install-api",
     "install-api": "cd api/ && npm install"
-  },
-  "devDependencies": {
-    "@types/react-redux": "^7.0.6"
   }
 }

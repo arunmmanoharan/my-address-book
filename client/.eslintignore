@@ -1,2 +1,4 @@
 
-/src/App.test.js
+/client/src/tests/App.test.js
+/src/tests/
+/src/serviceWorker.js

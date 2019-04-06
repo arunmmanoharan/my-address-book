@@ -16,7 +16,7 @@ const initialPeopleData = {
 	isFetching: false
 };
 
-const getPeople = (state = initialPeopleData, action) => {
+export const getPeople = (state = initialPeopleData, action) => {
 	switch (action.type) {
 		case QUERY_GET_PEOPLE_REQUEST: {
 			return {
@@ -51,7 +51,7 @@ const initialPersonId = {
 	id: 1
 };
 
-const getPersonID = (state = initialPersonId, action) => {
+export const getPersonID = (state = initialPersonId, action) => {
 	switch (action.type) {
 		case GET_PERSON_ID: {
 			return {
